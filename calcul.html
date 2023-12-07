@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; */
+            margin: 0;
+            background-color: black;
+        }
+       header{
+        height: 120px;
+        border: 1px solid rgba(255, 255, 0, 0.938);
+        background-color: rgba(255, 255, 0, 0.938); 
+       }
+       header h2{
+        text-align: center;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: 2em;
+        position: relative;
+        bottom: 10px;
+       
+       }
+       header h3{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-family: sans-serif;
+        position: relative;
+        bottom: 30px;
+       }
+        .calculator {
+            margin-top: 40px;
+            border: 1px solid white;
+            border-radius: 15px;
+            color: white;
+            background-color:black;
+            padding: 15px;
+            width: 380px;
+            height: 550px;
+        }
+        #result {
+            width: 100%;
+            height: 60px;
+            font-size: 44px;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom:35px;
+            background-color: black;
+           color: white;
+            border: 1px solid black;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+        button {
+            width: 90%;
+            height: 70px;
+            background-color: rgba(255, 255, 0, 0.938); 
+            box-shadow: 0px 0px 0px rgba(231, 231, 4, 0.247);
+            font-size: 24px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+        button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <h2>Technohacks Internship</h2>
+      <h3> Calculator</h3>
+    </header>
+ <center>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+            <button   onclick="reset()">C</button>
+            <button  onclick="deleteLastCharacter()">DEL</button>
+            <button  onclick="appendOperator('%')">%</button>
+            <button  onclick="appendOperator('/')">/</button>
+            <button  style="background-color:white;" onclick="appendToResult('7')">7</button>
+            <button style="background-color:white;" onclick="appendToResult('8')">8</button>
+            <button  style="background-color:white;" onclick="appendToResult('9')">9</button>
+            <button   onclick="appendOperator('*')">*</button>
+            <button style="background-color:white;" onclick="appendToResult('4')">4</button>
+            <button  style="background-color:white;"onclick="appendToResult('5')">5</button>
+            <button style="background-color:white;" onclick="appendToResult('6')">6</button>
+            <button onclick="appendOperator('-')">-</button>
+            <button style="background-color:white;" onclick="appendToResult('1')">1</button>
+            <button style="background-color:white;" onclick="appendToResult('2')">2</button>
+            <button style="background-color:white;" onclick="appendToResult('3')">3</button>
+            <button  onclick="appendOperator('+')">+</button>
+            <button style="background-color:white;" ="appendToResult('0')">0</button>
+            <button style="background-color:white;" onclick="appendToResult('00')">00</button>
+            <button style="background-color:white;" onclick="appendToResult('.')">.</button>
+            <button style="background-color: rgb(0,255,0,0.938); color: white;" onclick="calculateResult()">=</button>
+            
+        </center>
+            
+        </div>
+    </div>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function appendOperator(operator) {
+            const result = document.getElementById("result").value;
+            if (result !== '' && !isNaN(result.charAt(result.length - 1))) {
+                document.getElementById("result").value += operator;
+            }
+        }
+
+        function calculateResult() {
+            const result = document.getElementById("result").value;
+            if (result !== '') {
+                try {
+                    document.getElementById("result").value = eval(result);
+                } catch (error) {
+                    document.getElementById("result").value = 'Error';
+                }
+            }
+        }
+
+        function reset() {
+            document.getElementById("result").value = '';
+        }
+
+        function deleteLastCharacter() {
+            const result = document.getElementById("result").value;
+            document.getElementById("result").value = result.slice(0, -1);
+        }
+    </script>
+</body>
+</html>

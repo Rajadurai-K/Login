@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="icon" href="/images/WhatsApp Image 2023-10-31 at 6.16.20 AM.jpeg">
+    <style type="text/css">
+        body
+        {
+            /* background-image: url(/images/background.jpg);
+            background-size: cover; */
+           background:radial-gradient(white,rgb(248, 211, 141));
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+        }
+        .container{
+           
+            width: 65%;
+            height:740px;
+            margin-top:85px;
+            background-color: rgb(245, 240, 231);          
+        }
+        .cartx{ 
+            border-right: 1px solid darkgray;
+            border-bottom: 1px solid darkgray;
+            width:240px;
+            height:70px;
+            font-family:sans-serif;
+            font-size:24px;
+            font-weight:700;
+            text-align: center;
+            padding-bottom: 20px;
+            position: relative;
+            color:rgba(0, 0, 0, 0.877);
+            
+        }
+        h3 svg{
+            margin-top: 2px;
+            position: relative;
+            top: 5px;
+        }
+        h3{
+            position: relative;
+            right:5px;
+            bottom:5px;
+            top:20px;
+        }
+        div nav ul li{
+            display: inline;
+            text-align: center;
+            position: relative;
+            bottom: 18px;
+            font-size: 12px;
+            font-family: sans-serif;
+            text-transform:capitalize;
+            font-weight:normal;
+            font-style: normal;
+            cursor:pointer;
+        }
+      
+        .nav{
+            width:600px;
+            position: relative;
+            left:180px;
+            bottom: 51px;
+            border-bottom:1px solid darkgray;
+           
+        }
+        .icon{
+            border-left:1px solid darkgray;
+           border-bottom:1px solid darkgray;
+            position: relative;
+            left:750px;
+            bottom: 142px;
+            width: 110px;
+            height:90px;
+            padding-left: 20px;
+        }
+        .icon i img{
+            margin-top: 35px; 
+            cursor: pointer;
+        }
+        .gen{
+           border-left:1px solid darkgray;
+           border-right:1px solid darkgray;
+           border-bottom:1px solid darkgray;
+           width:600px;
+           height:400px;
+           margin-left:50px;
+           position: relative;
+           bottom: 169px;
+           justify-content: center;
+           padding-left: 30px;
+       
+        }
+        .imag1 img{
+            width:315px;
+            height: 401px;
+            border-radius: 40% 40%;
+        
+        }
+        .imag1{
+            border-bottom:1px solid darkgray;
+            border-left:1px solid darkgray;
+            border-right:1px solid darkgray;
+            width:315px;
+            background-color:rgba(255, 68, 0, 0.863);
+            position: relative;
+            left:505px;
+            bottom:571px;
+            height:401px;
+        }
+        .gen h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 60px;
+            color:rgba(0, 0, 0, 0.877);
+            position: relative;
+            top:20px;
+            font-size: 2.5em;
+        }
+        .gen p{
+            color: rgba(0, 0, 0, 0.589);
+            padding-top: 10px;
+            font-family:sans-serif;
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-size: normal;
+        }
+        .gen h4{
+            font-family:serif;
+            font-size: 1.5em;
+            color:rgba(0, 0, 0, 0.877);
+        }
+        .gen button{
+            width: 120px;
+            height:40px;
+            color: black;
+            background-color:rgba(255, 68, 0, 0.863);
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            font-weight: bold;
+            box-shadow: 4px 4px 4px  black;
+        }
+        .gen #arrow{
+            position: relative;
+            left:170px;
+            bottom:55px;
+        }
+        .trend{
+            width:315px;
+            border-bottom:1px solid darkgray;
+            border-left:1px solid darkgray;
+            border-right:1px solid darkgray;
+            background-color: yellow;
+            position: relative;
+            left:505px;
+            bottom:1003px;
+            height:200px;
+            text-align: center;
+            position: relative;
+        }
+        .trend h2{
+            position: relative;
+            top:65px;
+            font-family: sans-serif;
+            color:rgba(0, 0, 0, 0.877);
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+        .imag2 img{
+            width:130px;
+            height:200px;
+            border:1px solid darkgray;
+        }
+        .imag2{
+            position: relative;
+            bottom:572px;
+            left:50px;
+        }
+        .looks{
+            border: 1px solid darkgray;
+            width:323px;
+            position: relative;
+            bottom:778px;
+            left:181px;
+            height:200px;
+        }
+        .looks h4{
+            font-family: sans-serif;
+            color:rgba(0, 0, 0, 0.877);
+            padding-left:40px;
+            padding-top: 35px;
+            line-height: 30px;
+        }
+        .looks h4::first-letter{
+            color:orangered;
+            font-size: 2em;
+            font-family:sans-serif;
+        }
+        .container2{
+     
+            background-color: rgb(245, 240, 231);
+            width:27%;
+            margin-left: 925px;
+            position: relative;
+            bottom:845px;
+        }
+        .container2 div h1{
+            font-family:serif;
+            font-size: 2em;
+            position: relative;
+            top:20px;
+        }
+        .container2 .dol{
+            
+            border-left: 1px solid rgb(134, 132, 132);
+            padding-left: 20px;
+            margin-left: 24px;
+            height:80px;
+        }
+        .imagg1 img{
+            width:315px;
+            height: 405px;
+            border-radius: 40% 40%;
+           
+        }
+        .imagg1 {
+            border-left: 1px solid rgb(134, 132, 132);
+            border-right: 1px solid rgb(134, 132, 132);
+            width:315px;
+            margin-left:24px;
+            height: 405px;
+            background-color:rgba(255, 68, 0, 0.863);
+        }
+        .conimg{
+            border-top:1px solid rgb(134, 132, 132);
+            border-bottom:1px solid rgb(134, 132, 132);
+        }
+        .container2 button{
+            width: 130px;
+            height:50px;
+            color: black;
+            background-color:rgba(255, 68, 0, 0.863);
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            font-weight: bold;
+        }
+        .container2 .btn{
+            margin-left: 24px;
+            height:120px;
+            width:315px;
+            border-left: 1px solid rgb(134, 132, 132);
+            border-right: 1px solid rgb(134, 132, 132);
+        }
+        .container2 .btn button{
+            margin-left: 95px;
+            margin-top: 35px;
+            box-shadow: 4px 4px 4px  rgb(0, 0, 0);
+        }
+      
+        .container3 div{
+            width:315px;
+            height:300px;
+            border-right: 1px solid darkgray;
+            border-left: 1px solid darkgray;
+            margin-left: 24px;
+        }
+        .container3 div img{
+            width:215px;
+            height:230px;
+            margin-left: 45px;
+            border-bottom:1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+           
+        }
+        .container3{
+            background-color: rgb(245, 240, 231);
+            width:27%;
+            height:300px;
+            margin-left: 925px;
+            position: relative;
+            bottom:800px;
+        }
+        .container3 p{
+            font-family: sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-left:15px;
+            color:rgba(0, 0, 0, 0.877);
+        }
+        .container3 p::first-letter{
+            color:orangered;
+            font-size: 2em;
+            font-family:sans-serif;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cartx">
+            <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M 13 4 C 10.97 4 9.4052969 5.7677656 9.4042969 9.0097656 C 9.4042969 11.126766 12.608219 16.5575 15.449219 21.3125 C 15.449219 9.0005 15.146 7.667 13 4 z M 19 4 C 16.812 7.604 16.550781 8.9995 16.550781 21.3125 C 19.391781 16.5575 22.595703 11.126766 22.595703 9.0097656 C 22.594703 5.7667656 21.03 4 19 4 z M 6 8 C 3.021 10.079 4.0009062 15.000422 5.5039062 16.607422 C 6.4969063 17.647422 10.35 19.52 14 22 L 6 8 z M 26 8 L 18 22 C 21.65 19.52 25.503094 17.647422 26.496094 16.607422 C 27.999094 15.000422 28.979 10.079 26 8 z M 2 16 C 2.048 21.542 5.4307969 23 7.7167969 23 L 13.431641 23 L 2 16 z M 30 16 L 18.568359 23 L 24.283203 23 C 26.569203 23 29.952 21.542 30 16 z M 5.1171875 24 C 5.4361875 25.654 6.1573281 27 8.2363281 27 C 10.315328 27 12.325641 25.8 13.431641 24 L 5.1171875 24 z M 18.568359 24 C 19.674359 25.8 21.684672 27 23.763672 27 C 25.842672 27 26.563813 25.654 26.882812 24 L 18.568359 24 z"></path></svg>CARTX
+            </h3>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li style="margin-left: 120px;">Home</li>
+                    <li style="color: darkgray; margin-left: 40px;" >About Us</li>
+                    <li style="color: darkgray; margin-left: 40px;">Support</li>
+                    <li style="color: darkgray; margin-left: 50px;">Products</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="icon">
+            <i>
+                <img width="25" height="25" src="https://img.icons8.com/puffy/100/experimental-search-puffy--v1.png" alt="experimental-search-puffy--v1" />
+            </i>
+            <i>
+                <img width="25" height="25" src="https://img.icons8.com/ios/100/like--v1.png" alt="like--v1" style="margin-left: 5px;"/>
+            </i>
+            <i>
+                <img width="25" height="25" src="https://img.icons8.com/material-outlined/100/fast-cart.png" alt="fast-cart" style="margin-left: 5px;"/>
+            </i>
+        </div>
+        <div class="gen">
+            <h1>NEXT GEN<img style="margin-left: 30px;" src="/images/icons8-location-60.png" alt="location logo"> <br>SMART WATCH
+            </h1>
+            <p>Everyone looks your watch and it represents <br>who you are your values and your personal style.</p>
+            <h4>$550.00</h4>
+            <button type="submit">Shop Now</button>
+            <div>
+            </div>
+            <img id="arrow" src="/images/icons8-left-2-80.png" alt=" left arrow mark">
+        </div>
+        <div class="imag1">
+            <img src="https://www.cjcharles.com/cdn/shop/articles/How_Tight_Should_a_Watch_Be_600x600_crop_center.jpg?v=1623861560" alt="A man who wear watch">  
+        </div>
+        <div class="imag2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Vv2e_qe2Wk28dmsQISb4reR15kimzn7x7LHP514VeHzuJR6LpCNjtIDil2abIUEuGz8&usqp=CAU" alt="a man who watch time ">
+        </div>
+        <div class="looks">
+            <h4>Everyone looks your watch and <br>it represents who you are,your <br>values and your personal style.</h4>
+        </div>
+        <div class="trend">
+            <h2><span style="position: relative; right:25px;">WHATS</span><br>TRENDING?</h2>
+        </div>
+
+    </div>
+    <div class="container2">
+        <div class="dol">
+            <h1>$550.00</h1>
+        </div>
+        <div class="conimg">
+        <div class="imagg1">
+            <img src="https://www.cjcharles.com/cdn/shop/articles/How_Tight_Should_a_Watch_Be_600x600_crop_center.jpg?v=1623861560" alt="A man who wear watch">  
+        </div>
+        </div>
+        <div class="btn">
+            <button type="submit" >Shop Now</button>
+        </div>
+    </div>
+    <div class="container3">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Vv2e_qe2Wk28dmsQISb4reR15kimzn7x7LHP514VeHzuJR6LpCNjtIDil2abIUEuGz8&usqp=CAU" alt="a man who watch time ">
+            <p>Everyone looks at your watch and it</p>
+        </div>
+    </div>
+</body>

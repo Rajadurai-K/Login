@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:black;
+      align-items: center;
+      margin: 0;
+    }
+    .registration-container {
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 0 0px rgba(209, 198, 198, 0.808);
+     width:30%;
+     margin: auto auto;
+     margin-top: 20px;
+     background-color: rgb(51,51,51);
+    }
+    h2 {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+    }
+    label {
+      display:block;
+      text-align: left;
+      margin-top: 20px;
+      color: white;
+    }
+    input {
+      background-color: rgb(156, 153, 153);
+      width: 90%;
+      padding: 10px;
+      margin-top: 5px;
+     border: 1px solid  rgb(156, 153, 153);
+      border-radius: 5px;
+      font-size: 16px;
+      color: white;
+
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error-message {
+      color: rgb(223, 57, 57);
+      margin-top: 5px;
+    }
+
+    .success-message {
+      color: rgb(40, 238, 40);
+      margin-top: 5px;
+    }
+    nav{
+        height: 50px;
+        padding: 20px;
+        background-color: rgb(51,51,51);
+   
+       }
+       nav h2{
+        text-align: left;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        position: relative;
+        top:0px;
+        color: white;
+       font-weight: lighter;
+       letter-spacing: 1px;
+       }
+       nav h4{
+        text-align: right;
+        text-transform:capitalize;
+        font-size: 1.5em;
+        font-weight: lighter;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        position: relative;
+        bottom:65px;
+        color: white;
+        letter-spacing: 1px;
+       }
+   
+
+  </style>
+</head>
+<body>
+    <nav>
+        <h2>Technohacks Internship</h2>
+        <h4> title:registration form</h4>
+    </nav>
+  <div class="registration-container">
+    <h2>Registration</h2>
+    <form id="registration-form" action="#">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <p class="error-message" id="username-error-message"></p>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <p class="error-message" id="email-error-message"></p>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <p class="error-message" id="password-error-message"></p>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+      <p class="error-message" id="confirm-password-error-message"></p>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="registration-success-message" class="success-message"></p>
+  </div>
+  <script>
+    document.getElementById('registration-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      // Simple validation - you can add more complex validation here.
+      if (username.trim() === '') {
+        document.getElementById('username-error-message').textContent = 'Username is required';
+      } else {
+        document.getElementById('username-error-message').textContent = '';
+      }
+
+      if (email.trim() === '') {
+        document.getElementById('email-error-message').textContent = 'Email is required';
+      } else {
+        document.getElementById('email-error-message').textContent = '';
+      }
+
+      if (password.trim() === '') {
+        document.getElementById('password-error-message').textContent = 'Password is required';
+      } else {
+        document.getElementById('password-error-message').textContent = '';
+      }
+
+      if (confirmPassword.trim() === '') {
+        document.getElementById('confirm-password-error-message').textContent = 'Confirm Password is required';
+      } else if (confirmPassword !== password) {
+        document.getElementById('confirm-password-error-message').textContent = 'Passwords do not match';
+      } else {
+        document.getElementById('confirm-password-error-message').textContent = '';
+      }
+
+      if (username && email && password && confirmPassword === password) {
+        document.getElementById('registration-success-message').textContent = 'Registration successful';
+      } else {
+        document.getElementById('registration-success-message').textContent = '';
+      }
+    });
+  </script>
+</body>
+</html>
